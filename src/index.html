@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script
+      src="https://kit.fontawesome.com/de01e3e79c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Carosel</title>
+  </head>
+  <body>
+    <div
+      id="total"
+      class="h-screen flex justify-center items-center"
+      style="background-color: red">
+      <div id="arrow-left" class="absolute left-0 w-[30px] h-[30px] rounded-full flex justify-center items-center bg-[rgba(128,128,128,0.2)] cursor-pointer active:bg-white">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+      <div
+        id="arrow-right"
+        class="absolute right-0 w-[30px] h-[30px] rounded-full flex justify-center items-center bg-[rgba(128,128,128,0.2)] cursor-pointer active:bg-white">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+
+      <form
+        id="inputfield"
+        class="w-screen h-[100%] flex justify-center items-center flex-col">
+        <div id="text" class="text-6xl mb-72"></div>
+        <div class="flex">
+          <input
+            placeholder="Change Text"
+            id="inputdata"
+            type="text"
+            value=""
+            class="pl-[10px]"
+          />
+          <input id="color-picker" type="color" class="cursor-pointer" />
+        </div>
+
+        <button
+          class="bg-black text-white font-bold py-2 px-4 rounded-full w-[10%] mt-3"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
